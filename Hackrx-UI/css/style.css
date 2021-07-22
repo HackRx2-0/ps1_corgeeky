@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.658);
+    width: 100%;
+    z-index: 10;
+    color: black;
+}
+
+.search-bar{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    width: 100%;
+}
+
+.navbar-brand img{
+    height: 40px;
+    width: 150px;
+}
+
+.carousel{
+    opacity: 0.9;
+}
+
+.input-group{
+    background: rgba(245, 245, 245, 0.795);
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-group input{
+    background: white;
+    border-radius: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-group input:active{
+    background: white;
+    border-radius: 10px;
+    color: #1c74bc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-group button{
+    background: transparent;
+    border-radius: 10px;
+    color: #1c74bc;
+}
+
+.input-group button:hover{
+    background: #1c74bc;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+}
+
+.content-banner{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 20px;
+    padding: 20px;
+}
+.content-banner .banner-heading{
+    color: #1c74bc;
+}
+
+.blink {
+    animation: blink 0.5s infinite;
+  }
+  @keyframes blink{
+    to { opacity: .0; }
+  }
+  .flex {
+      display: flex;
+  }
+  .header-sub-title {
+    color: black;
+    font-family: "Courier";
+    font-size: 20px;
+    padding: 0.1em;
+  }
+
+.img-banner img{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.nav-login{
+    background-color: #79bbf191;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+}
+.nav-login:hover{    
+    background-color: rgb(248, 244, 244);
+    transition: 0.5s;
+    border-radius: 20px;    
+    padding: 0 10px 0 10px;
+    border: 2px solid #1c74bc91;
+}
+
+.nav-sign{
+    background-color: #79bbf191;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+}
+.nav-sign:hover{    
+    background-color: rgb(248, 244, 244);
+    transition: 0.5s;
+    border-radius: 20px;    
+    padding: 0 10px 0 10px;
+    border: 2px solid #1c74bc91;
+}
