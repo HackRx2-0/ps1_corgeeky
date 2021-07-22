@@ -163,7 +163,7 @@ body{
 .signin_div {
     position: absolute;
     width: 350px;
-    height: 450px;
+    height: 455px;
     top: 20%;
     left: 37.5%;
     background: rgba(255, 255, 255, 0.5);
@@ -176,8 +176,8 @@ body{
     margin-bottom: 80px;
 }
 
-/* INPUT FIELDS */
-#form_username, #form_password{
+/*------------------------------------ INPUT FIELDS --------------------------------------*/
+#form_username, #form_password, #form_email, #form_fullname{
   height: 40px;
   width: 275px;
   margin-top: 5%;
@@ -223,9 +223,26 @@ input:focus {
 }
 
 .signin_signup_alternatives {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 5px;
   margin-bottom: 30px;
   font-family: "Montserrat";
   text-align: center;
+}
+
+.signin_signup_headings {
+    color: #111;
+    font-family: "Montserrat";
+    margin-top: 10%;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/*------------------------------------------- SIGNUP PAGE -------------------------------------*/
+#signup_body
+{
+    background-image: url('../img/signup_bg.jpeg');
+    width: 100%;
+    height: 100vh;
 }

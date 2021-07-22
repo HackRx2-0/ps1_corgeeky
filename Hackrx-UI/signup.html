@@ -14,7 +14,7 @@
         <!--script tags-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body id="login_body">
+<body id="signup_body">
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -58,15 +58,17 @@
         </div>
     </nav>
 
-    <!-- LOGIN FORM -->
+    <!-- SIGNUP FORM -->
     <div class="signin_div">
-        <p class="signin_signup_headings">LOGIN</p>
-        <form action="" class="signin_form">
+        <p class="signin_signup_headings">SIGN UP</p>
+        <form action="" class="signup_form">
+            <input type="text" placeholder="Full Name" id="form_fullname" required>
             <input type="text" placeholder="Username" id="form_username" required>
+            <input type="email" placeholder="Email Id" id="form_email" required>
             <input type="password" placeholder="Password" id="form_password" required>
-            <button type="submit" class="form_submit">Login</button>
+            <button type="submit" class="form_submit">Sign Up</button>
         </form>
-        <p class="signin_signup_alternatives">Do not have an account? Head <a href="signup.html">here</a></p>
+        <p class="signin_signup_alternatives">Already have an account? Head <a href="login.html">here</a></p>
     </div>
 
 
