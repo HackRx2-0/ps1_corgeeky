@@ -107,26 +107,27 @@ body{
 
 .nav-login{
     background-color: #79bbf191;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 0 10px 0 10px;
+    margin-right: 10px;
 }
 .nav-login:hover{    
     background-color: rgb(248, 244, 244);
     transition: 0.5s;
-    border-radius: 20px;    
+    border-radius: 5px;    
     padding: 0 10px 0 10px;
     border: 2px solid #1c74bc91;
 }
 
 .nav-sign{
     background-color: #79bbf191;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 0 10px 0 10px;
 }
 .nav-sign:hover{    
     background-color: rgb(248, 244, 244);
     transition: 0.5s;
-    border-radius: 20px;    
+    border-radius: 5px;    
     padding: 0 10px 0 10px;
     border: 2px solid #1c74bc91;
 }
