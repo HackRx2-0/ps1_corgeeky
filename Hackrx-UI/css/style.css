@@ -1,11 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body{
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
 }
 
 .navbar{
@@ -71,12 +74,17 @@ body{
     transition: 0.5s;
 }
 
+.banner-off{
+    margin-left: 30px;
+}
+
 .content-banner{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     height: 200px;
     background-color: rgba(255, 255, 255, 0.815);
     border-radius: 20px;
     padding: 20px;
+    justify-content: center;
 }
 .content-banner .banner-heading{
     color: #1c74bc;
@@ -100,7 +108,7 @@ body{
 
 .img-banner img{
     height: 200px;
-    width: 400px;
+    width: 500px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -132,6 +140,18 @@ body{
     border: 2px solid #1c74bc91;
 }
 
+@media only screen and (max-width: 600px) {
+    .img-banner img{
+        height: 200px;
+        width: 330px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    .banner-off{
+        margin: 0px;
+    }
+    
+  }
 
 /*------------------------------------------- LOGIN PAGE -------------------------------------*/
 #login_body
