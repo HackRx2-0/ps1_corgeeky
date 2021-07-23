@@ -20,4 +20,6 @@ Table of Contents
 
 ## How we build it 
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" width="75%">
+<p>
