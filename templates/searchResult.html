@@ -13,6 +13,8 @@
         <!--script tags-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
+
+
           .search-card-row{
   margin: 20px 90px 20px 90px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +38,7 @@
 }
 
 .search-card-header{
- background-color: #79c5e7;
+ background-color: #007bff;
  border-bottom: 1px #79c5e7 solid;
  padding: 2px 20px 0px 20px;
  color: black;
@@ -80,6 +82,7 @@
    margin-bottom: 20px;
  }
 }
+
         </style>
       </head> 
 <body>
@@ -134,6 +137,7 @@
         </div>
       </div>
 <br>
+{% if res %}
 {% for hit in res %}
 
 <div class="search-card-row">
@@ -143,7 +147,7 @@
         <div class="search-card-body">
             <p class="search-card-text"><b>{{hit['_source']['date_published']}}</b><br><i>Views:{{hit['_source']['views']}}</i></p>
             <p class="search-card-text">{{hit['_source']['answer_description']}}</p>
-            <div class="search-card-button"><a href="{{hit['_source']['link']}}" class="btn btn-primary" style="text-decoration:none; ">Read More</a></div>
+            <div class="search-card-button"><a href="{{hit['_source']['link']}}" target="_blank" class="btn btn-primary" style="text-decoration:none; ">Read More</a></div>
         </div>
     </div>
   </div>
@@ -160,7 +164,10 @@
   </div>
   <br> -->
 {% endfor %}
-
+{% else %}
+<br><br>
+<center><div class="search-card-text"><h3>Sorry! We don't have the answer to this query</h3></div></center>
+{% endif %}
 
 
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
@@ -172,6 +179,8 @@
         let url_req = pre.concat(s_item);
         window.location = url_req;
         }
+
+
         </script>
 </body>
 </html>
