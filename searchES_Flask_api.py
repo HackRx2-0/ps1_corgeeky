@@ -13,6 +13,7 @@ from nltk.corpus import stopwords
 nltk.download('stopwords')
 from nltk.tokenize import word_tokenize
 import nltk
+import indexES
 #from sentence_transformers import SentenceTransformer
 from flask import Flask , render_template, url_for, flash, redirect
 from flask import jsonify
@@ -119,8 +120,10 @@ def search(query):
                #"answer_description" : str(hit["_source"]["answer_description"]),
                # "tags":str(hit["_source"]["tags"])}
        # ret.append(dic)
-     
-    return render_template('searchResult.html', res=res_kw['hits']['hits'])
+    for hit in res_kw["hits"]["hits"]:
+        hit["_source"]["views"] = int(hit["_source"]["views"])
+    res = sorted(res_kw["hits"]["hits"], key=lambda k: k['_source']['views'], reverse = True)
+    return render_template('searchResult.html', res=res)
 
 @app.route("/home")
 def home():

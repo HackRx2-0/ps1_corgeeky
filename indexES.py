@@ -69,7 +69,7 @@ print("*************************************************************************
 #print("USE-Done")
 count = 0
 #sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
-with open("..\data\dataset.csv",encoding="utf8") as csvfile:
+with open("data\dataset.csv",encoding="utf8") as csvfile:
     readCSV = csv.reader(csvfile, delimiter = ",")
     next(readCSV, None) #skip the header
     for row in readCSV:

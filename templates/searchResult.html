@@ -141,7 +141,7 @@
     <div class="search-card">
         <div class="search-card-header"><h2><a href="{{hit['_source']['link']}}" style="text-decoration:none; color:white; text-transform:capitalize;">{{ hit['_source']['title'] }}</a></h2></div>
         <div class="search-card-body">
-            <p class="search-card-text"><b>{{hit['_source']['date_published']}}</b></p>
+            <p class="search-card-text"><b>{{hit['_source']['date_published']}}</b><br><i>Views:{{hit['_source']['views']}}</i></p>
             <p class="search-card-text">{{hit['_source']['answer_description']}}</p>
             <div class="search-card-button"><a href="{{hit['_source']['link']}}" class="btn btn-primary" style="text-decoration:none; ">Read More</a></div>
         </div>
