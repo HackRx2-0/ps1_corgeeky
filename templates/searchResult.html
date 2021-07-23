@@ -12,7 +12,76 @@
 
         <!--script tags-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head> 
+        <style>
+          .search-card-row{
+  margin: 20px 90px 20px 90px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.search-card-column {
+ float: left;
+ width: 100%;
+}
+
+.search-card {
+ box-shadow: 0 4px 8px 10px rgba(190, 186, 186, 0.2); 
+ background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.search-card:hover {
+ box-shadow: 0 4px 8px 10px rgba(34, 33, 33, 0.2); 
+ background-color: #ffffff;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.search-card-header{
+ background-color: #79c5e7;
+ border-bottom: 1px #79c5e7 solid;
+ padding: 2px 20px 0px 20px;
+ color: black;
+}
+
+.search-card-body{
+ padding: 5px 20px 20px 20px;
+}
+
+.search-card-button{
+ padding: 30px 0 10px 0;
+}
+
+.search-card-button a{
+ padding: 10px;
+ border: 2px solid #79c5e7;
+ color: white;
+ text-decoration: none;
+ border-radius: 10px;
+}
+
+.search-card-button a:hover{
+ padding: 10px;
+ border: 2px solid #79c5e7;
+ background-color: white;
+ color: black;
+ text-decoration: none;
+ border-radius: 10px;
+ transition: 0.5s;
+}
+
+.search-card-row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+@media screen and (max-width: 600px) {
+ .search-card-column {
+   width: 100%;
+   display: block;
+   margin-bottom: 20px;
+ }
+}
+        </style>
+      </head> 
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -64,31 +133,32 @@
           </div>
         </div>
       </div>
-<br><br>
-    {% for hit in res['hits']['hits'] %}
+<br>
+{% for hit in res %}
 
-    <div class="search-card-row">
-      <div class="search-card-column">
-        <div class="search-card">
-            <div class="search-card-header"><h2><a href="{{hit['_source']['link']}}">{{ hit['_source']['title'] }}</a></h2></div>
-            <div class="search-card-body">
-                <p class="search-card-text">{{hit['_source']['date_published']}}</p>
-                <p class="search-card-text">{{hit['_source']['answer_description']}}</p>
-                <div class="search-card-button"><a href="{{hit['_source']['link']}}" class="btn btn-primary">Read More</a></div>
-            </div>
+<div class="search-card-row">
+  <div class="search-card-column">
+    <div class="search-card">
+        <div class="search-card-header"><h2><a href="{{hit['_source']['link']}}" style="text-decoration:none; color:white; text-transform:capitalize;">{{ hit['_source']['title'] }}</a></h2></div>
+        <div class="search-card-body">
+            <p class="search-card-text"><b>{{hit['_source']['date_published']}}</b></p>
+            <p class="search-card-text">{{hit['_source']['answer_description']}}</p>
+            <div class="search-card-button"><a href="{{hit['_source']['link']}}" class="btn btn-primary" style="text-decoration:none; ">Read More</a></div>
         </div>
-      </div>
     </div>
+  </div>
+</div>
+<br><br>
 
-    <!-- <div class="card" style="width: 75%;margin-left: auto;margin-right: auto;">
-        <div class="card-body">
-            <h5 class="card-header"><a href="{{hit['_source']['link']}}">{{ hit['_source']['title'] }}</a></h5>
-          <h5 class="card-title">{{hit['_source']['date_published']}}</h5>
-          <p class="card-text">{{hit['_source']['answer_description']}}</p>
-          <a href="{{hit['_source']['link']}}" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <br> -->
+<!-- <div class="card" style="width: 75%;margin-left: auto;margin-right: auto;">
+    <div class="card-body">
+        <h5 class="card-header"><a href="{{hit['_source']['link']}}">{{ hit['_source']['title'] }}</a></h5>
+      <h5 class="card-title">{{hit['_source']['date_published']}}</h5>
+      <p class="card-text">{{hit['_source']['answer_description']}}</p>
+      <a href="{{hit['_source']['link']}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <br> -->
 {% endfor %}
 
 
