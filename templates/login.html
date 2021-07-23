@@ -8,7 +8,7 @@
         <!--stylesheets-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
         <!--script tags-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,51 +16,52 @@
 <body id="login_body">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="img/bajajmarket.png"></a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{url_for('static', filename='img/bajajmarket.png')}}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">eStore</a>
+              <a class="nav-link text-dark" href="{{ url_for('home') }}">eStore</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Loans</a>
+              <a class="nav-link text-dark" href="#">Loans</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Insurance</a>
+              <a class="nav-link text-dark" href="#">Insurance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Investments</a>
+              <a class="nav-link text-dark" href="#">Investments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Discover</a>
+              <a class="nav-link text-dark" href="#">Discover</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Pocket Insurance & VAS</a>
+              <a class="nav-link text-dark" href="#">Pocket Insurance & VAS</a>
             </li>
-            </ul>
-            <ul class="navbar-nav">
+          </ul>
+          <ul class="navbar-nav">
             <li class="nav-item">
-                <div class="nav-login">
-                <a class="nav-link text-dark" href="#">Login</a>
+              <div class="nav-login">
+              <a class="nav-link text-dark" href="{{ url_for('login') }}">Login</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-sign">
+                <a class="nav-link text-dark" href="{{ url_for('signup') }}">Sign Up</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <div class="nav-sign">
-                <a class="nav-link text-dark" href="signup.html">Sign Up</a>
-                </div>
-            </li>
-            </ul>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
     <!-- LOGIN FORM -->
     <div class="signin_div">
         <p class="signin_signup_headings">LOGIN</p>
-        <form action="" class="signin_form">
+        <form action="" class="signin_form" method="POST">
+          {{login_form.hidden_tag()}}
             <input type="text" placeholder="Username" id="form_username" required>
             <input type="password" placeholder="Password" id="form_password" required>
             <button type="submit" class="form_submit">Login</button>
@@ -69,7 +70,7 @@
     </div>
 
 
-    <script src="js/script.js"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

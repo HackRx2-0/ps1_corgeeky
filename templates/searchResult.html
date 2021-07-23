@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Corgeeky</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/bajaj.png">
+
+        <!--stylesheets-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+        <!--script tags-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head> 
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{url_for('static', filename='img/bajajmarket.png')}}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="{{ url_for('home') }}">eStore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Loans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Insurance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Investments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Discover</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Pocket Insurance & VAS</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <div class="nav-login">
+              <a class="nav-link text-dark" href="{{ url_for('login') }}">Login</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-sign">
+                <a class="nav-link text-dark" href="{{ url_for('signup') }}">Sign Up</a>
+                </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br><br><br><br><br>
+      <div class="input-group" style="width: 75%; margin-left: auto; margin-right: auto;">
+        <input type="search" placeholder="Search..." class="form-control" id="search_item">
+        <div class="input-group-append">
+          <div class="btn-group">
+            <button class="btn" type="submit" onclick="redirect()"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+<br><br>
+    {% for hit in res['hits']['hits'] %}
+    <div class="card" style="width: 75%;margin-left: auto;margin-right: auto;">
+        <div class="card-body">
+            <h5 class="card-header"><a href="{{hit['_source']['link']}}">{{ hit['_source']['title'] }}</a></h5>
+          <h5 class="card-title">{{hit['_source']['date_published']}}</h5>
+          <p class="card-text">{{hit['_source']['answer_description']}}</p>
+          <a href="{{hit['_source']['link']}}" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <br>
+{% endfor %}
+
+
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>function redirect(){
+        const s_item= $("#search_item").val();
+        let pre="/search/";
+        let url_req = pre.concat(s_item);
+        window.location = url_req;
+        }
+        </script>
+</body>
+</html>
