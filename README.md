@@ -4,8 +4,7 @@ Table of Contents
 -----------------
 
 - [PROBLEM STATEMENT](#problem-statement)
-- [OUR APPROACH](#getting-started)
-- [Our Approach](#our-approach)
+- [OUR APPROACH](#our-approach)
 - [BLOCK DIAGRAM](#block-diagram)
 - [CHALLENGES](#challenges)
 - [ACCOMPLISHMENTS](#accomplishment)
