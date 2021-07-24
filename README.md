@@ -5,6 +5,7 @@ Table of Contents
 
 - [PROBLEM STATEMENT](#problem-statement)
 - [OUR APPROACH](#our-approach)
+- [!!FEATURES SUGGESTED AFTER PITCH 3.0!!](#features-suggested-by-the-jury-after-pitch-3.0)
 - [BLOCK DIAGRAM](#block-diagram)
 - [ACCOMPLISHMENTS](#accomplishments)
 - [corgeekies](#corgeekies)
@@ -32,6 +33,14 @@ python searchES_Flask_api.py
 # OUR APPROACH :bow_and_arrow:
 <img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" width="65%"/>
 <a href="https://youtu.be/rGZIyOLdqvk">Check out the video presentation</a>
+
+# FEATURES SUGGESTED BY THE JURY AFTER PITCH 3.0
+<img src="https://user-images.githubusercontent.com/51106967/126858873-35761724-0137-4244-bee0-c28c2aa8c549.gif" width="65%">
+
+### This video puts forth the following features:
+
+- [x] Implementation of search facet: Users have been provided with a few very commonly searched words in the form of checkboxes. They need not necessarily type out a search query and can just select the checkboxes to make popular searches. However, if required, the search bar and the checkboxes can be used in combination to make the queries.
+- [x] Implementation of fuzzy search: As shown in the last query ('child paln'), typos in the search yield results as well. We have implemented the feature to a great extent however there is scope for enhancement in the future.
 
 # BLOCK DIAGRAM 
 <img src="https://user-images.githubusercontent.com/51106967/126855376-f017660e-b90b-400d-8deb-51b893bc7cdd.png" width="65%">
