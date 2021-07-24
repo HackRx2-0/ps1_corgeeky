@@ -18,10 +18,11 @@ Table of Contents
 # GETTING STARTED :gear:
 
 # OUR APPROACH :bow_and_arrow:
-<img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" />
+<img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" width="65%"/>
 <a href="https://youtu.be/rGZIyOLdqvk">Check out the video presentation</a>
 
 # BLOCK DIAGRAM 
+<img src="https://user-images.githubusercontent.com/51106967/126855376-f017660e-b90b-400d-8deb-51b893bc7cdd.png" width="65%">
 
 # CHALLENGES
 
@@ -30,3 +31,8 @@ Table of Contents
 # LIST OF PACKAGES
 
 # coorgeekies 
+
+- Shreya Verma
+- Ishita Tiwari
+- Krittika Chaturvedi
+- Arshita Marwaha
