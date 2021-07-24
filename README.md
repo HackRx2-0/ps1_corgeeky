@@ -3,23 +3,30 @@
 Table of Contents
 -----------------
 
-- [Problem Statement](#problem-statement)
-- [Prerequisites](#prerequisites)
-- [Our Approach](#how-we-build-it)
-- [Challenges](#getting-started)
-- [Accomplishment](#accomplishment)
-- [List of Packages](#list-of-packages)
-- [Team Member](#team-member)
+- [PROBLEM STATEMENT](#problem-statement)
+- [OUR APPROACH](#getting-started)
+- [Our Approach](#our-approach)
+- [BLOCK DIAGRAM](#block-diagram)
+- [CHALLENGES](#challenges)
+- [ACCOMPLISHMENTS](#accomplishment)
+- [LIST OF PACKAGES](#list-of-packages)
+- [corgeekies](#corgeekies)
 
-## Problem Statement
-<img src="https://user-images.githubusercontent.com/59198489/126848303-b0470a91-d8b0-419d-9cb8-b45cf159feee.png">
+# PROBLEM STATEMENT :woman_technologist:
+<img src="https://user-images.githubusercontent.com/59198489/126848303-b0470a91-d8b0-419d-9cb8-b45cf159feee.png" width="65%" height = "350"/>
 
-## Prerequisites
+# GETTING STARTED :gear:
 
-## Getting Started
+# OUR APPROACH :bow_and_arrow:
+<img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" />
+<a href="https://youtu.be/rGZIyOLdqvk">Check out the video presentation</a>
 
-## How we build it 
+# BLOCK DIAGRAM 
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/51106967/126849157-58e09044-2a56-4683-94d0-0f1065a695ef.gif" width="75%">
-<p>
+# CHALLENGES
+
+# ACCOMPLISHMENTS 🥇
+
+# LIST OF PACKAGES
+
+# coorgeekies 
