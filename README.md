@@ -35,7 +35,7 @@ python searchES_Flask_api.py
 <a href="https://youtu.be/rGZIyOLdqvk">Check out the video presentation</a>
 
 # FEATURES SUGGESTED BY THE JURY AFTER PITCH 3.0
-<img src="https://user-images.githubusercontent.com/51106967/126858873-35761724-0137-4244-bee0-c28c2aa8c549.gif" width="65%">
+<img src="https://user-images.githubusercontent.com/51106967/126859292-bbdbbf51-0cfc-46d7-b5d3-b9569397452e.gif" width="65%">
 
 ### This video puts forth the following features:
 
