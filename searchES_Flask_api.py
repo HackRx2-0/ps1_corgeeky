@@ -5,7 +5,6 @@ import re
 import requests
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
-from flask_sqlalchemy import SQLAlchemy
 import csv
 import nltk
 import tensorflow as tf
@@ -14,15 +13,16 @@ nltk.download('stopwords')
 from nltk.tokenize import word_tokenize
 import nltk
 import indexES
-#from sentence_transformers import SentenceTransformer
-from flask import Flask , render_template, url_for, flash, redirect
 from flask import jsonify
+#imports to build the web application
+from flask import Flask , render_template, url_for, flash, redirect
+from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin
 from flask_login import login_user, LoginManager, current_user, logout_user
 
-#sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
+
 
 def connect2ES():
     es = Elasticsearch([{"host": "localhost", "port": 9200}], timeout=60, max_retries=10, retry_on_timeout=True)
@@ -108,18 +108,6 @@ es = connect2ES()
 def search(query):
     q = query.replace("+", " ")
     res_kw = keywordSearch(es, q)
-    #res_sw = sentenceSimilaritybyNN(es, q)
-    
-    #ret = []
-    #for hit in res_kw["hits"]["hits"]:
-        #dic = {"score": str(hit["_score"]),
-              #"title": str(hit["_source"]["title"]),
-               #"link": str(hit["_source"]["link"]),
-               #"date_published" :str(hit["_source"]["date_published"]),
-               #"views": str(hit["_source"]["views"]),
-               #"answer_description" : str(hit["_source"]["answer_description"]),
-               # "tags":str(hit["_source"]["tags"])}
-       # ret.append(dic)
     for hit in res_kw["hits"]["hits"]:
         hit["_source"]["views"] = int(hit["_source"]["views"])
     res = sorted(res_kw["hits"]["hits"], key=lambda k: k['_source']['views'], reverse = True)
