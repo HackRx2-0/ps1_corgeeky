@@ -79,3 +79,6 @@ Werkzeug==2.0.1
 wrapt==1.12.1
 WTForms==2.3.3
 youtube-dl==2021.4.1
+email_validator==1.1.1
+flask_sqlalchemy==2.5.1
+flask_bcrypt==0.7.1
