@@ -27,6 +27,11 @@ Table of Contents
 # CHALLENGES
 
 # ACCOMPLISHMENTS 🥇
+- [x] User friendly UI focused around the search bar which requires minimum number of clicks to operate.
+- [x] Scraping unstructured data from the website to generate structured data.
+- [x] Applying elastic search to implement our solution for the problem statement.
+- [x] Sorting the resultant documents based on their views as per the jury's suggestion.
+- [x] Assessing future scope and features that could be added to our product. 
 
 # LIST OF PACKAGES
 
