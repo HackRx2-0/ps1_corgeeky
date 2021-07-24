@@ -14,6 +14,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
 
+          body{
+            background-image: linear-gradient(to bottom, white, rgb(177, 171, 171), rgb(207, 207, 250),white, silver);
+          }
 
           .search-card-row{
   margin: 20px 90px 20px 90px;
@@ -83,6 +86,19 @@
  }
 }
 
+.filter-check-box{
+  margin: 40px 0px 40px 0px;
+  padding: 10px;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.filter-check-box .check-box-group{
+  padding: 20px;
+}
+
         </style>
       </head> 
 <body>
@@ -136,7 +152,23 @@
           </div>
         </div>
       </div>
-<br>
+
+<div class="filter-check-box">
+ 
+  <div class="check-box-group" id="check-box">
+    <input type="checkbox" id="loan" name="loan">&nbsp;&nbsp;Loan
+  </div>
+  <div class="check-box-group" id="check-box">
+    <input type="checkbox" id="investment" name="investment">&nbsp;&nbsp;Investments
+    </div>
+    <div class="check-box-group" id="check-box">
+    <input type="checkbox" id="emi" name="emi">&nbsp;&nbsp;EMI
+    </div>
+    <div class="check-box-group" id="check-box">
+    <input type="checkbox" id="remedies" name="remedies">&nbsp;&nbsp;Home Remedies
+    </div>
+  
+</div>
 {% if res %}
 {% for hit in res %}
 
@@ -145,7 +177,7 @@
     <div class="search-card">
         <div class="search-card-header"><h2><a href="{{hit['_source']['link']}}" style="text-decoration:none; color:white; text-transform:capitalize;">{{ hit['_source']['title'] }}</a></h2></div>
         <div class="search-card-body">
-            <p class="search-card-text"><b>{{hit['_source']['date_published']}}</b><br><i>Views:{{hit['_source']['views']}}</i></p>
+            <p class="search-card-text"><span class="search-card-date" id="search-card-date"><b>{{hit['_source']['date_published']}}</b></span><br><i>Views:{{hit['_source']['views']}}</i></p>
             <p class="search-card-text">{{hit['_source']['answer_description']}}</p>
             <div class="search-card-button"><a href="{{hit['_source']['link']}}" target="_blank" class="btn btn-primary" style="text-decoration:none; ">Read More</a></div>
         </div>
@@ -176,10 +208,36 @@
     <script>function redirect(){
         const s_item= $("#search_item").val();
         let pre="/search/";
-        let url_req = pre.concat(s_item);
-        window.location = url_req;
+        
+
+        var loan = document.getElementById("loan");
+        var investment = document.getElementById("investment");
+        var remedies = document.getElementById("remedies");
+        var emi = document.getElementById("emi");
+        var s="";
+
+        if(loan.checked==true)
+        {
+          s=s.concat(" loan ");
+        }
+        if(emi.checked==true)
+        {
+          s=s.concat(" emi ");
+        }
+        if(investment.checked==true)
+        {
+          s=s.concat(" investment ");
+        }
+        if(remedies.checked==true)
+        {
+          s=s.concat(" remedies ");
         }
 
+        let url_req = pre.concat(s_item);
+        let final = url_req.concat(s);
+        window.location = final;
+        
+        }
 
         </script>
 </body>
