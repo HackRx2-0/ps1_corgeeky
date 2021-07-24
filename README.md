@@ -37,6 +37,9 @@ python searchES_Flask_api.py
 # FEATURES SUGGESTED BY THE JURY AFTER PITCH 3.0
 <img src="https://user-images.githubusercontent.com/51106967/126859292-bbdbbf51-0cfc-46d7-b5d3-b9569397452e.gif" width="65%">
 
+# OUR UI
+<img src="https://user-images.githubusercontent.com/72500761/126859475-780052e3-99f1-48fe-a66d-5ea17297a5f2.gif" width="65%">
+
 ### This video puts forth the following features:
 
 - [x] Implementation of search facet: Users have been provided with a few very commonly searched words in the form of checkboxes. They need not necessarily type out a search query and can just select the checkboxes to make popular searches. However, if required, the search bar and the checkboxes can be used in combination to make the queries.
