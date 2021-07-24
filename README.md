@@ -6,7 +6,6 @@ Table of Contents
 - [PROBLEM STATEMENT](#problem-statement)
 - [OUR APPROACH](#our-approach)
 - [BLOCK DIAGRAM](#block-diagram)
-- [CHALLENGES](#challenges)
 - [ACCOMPLISHMENTS](#accomplishments)
 - [corgeekies](#corgeekies)
 
@@ -37,7 +36,7 @@ python searchES_Flask_api.py
 # BLOCK DIAGRAM 
 <img src="https://user-images.githubusercontent.com/51106967/126855376-f017660e-b90b-400d-8deb-51b893bc7cdd.png" width="65%">
 
-# CHALLENGES
+
 
 # ACCOMPLISHMENTS 🥇
 - [x] User friendly UI focused around the search bar which requires minimum number of clicks to operate.
